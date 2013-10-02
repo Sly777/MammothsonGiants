@@ -1,6 +1,7 @@
 (function($, window, document) {
     $(document).ready(function() {
-        $('#scene').parallax();
+        $('.loadingScreen').fadeOut("slow");
+        website();
     });
 })($, window, document);
 
@@ -44,4 +45,20 @@ function showLyric() {
             });
         });
     }, false);
+}
+
+function website() {
+    $('#scene').parallax();
+
+    var resources = {
+        dev: { translation: { 'downloadAlbum': 'Download', 'streamAlbum': "Listen" } },
+        en: { translation: { 'downloadAlbum': 'Download', 'streamAlbum': "Listen" } },
+        tr: { translation: { 'downloadAlbum': 'Yükle', 'streamAlbum': "Dinle" } },
+        'en-US': { translation: { 'downloadAlbum': 'Download', 'streamAlbum': "Listen" } },
+        'tr-TR': { translation: { 'downloadAlbum': 'Yükle', 'streamAlbum': "Dinle" } }
+    };
+
+    i18n.init({ resStore: resources }, function(t) {
+        $(".mogcontain").i18n();
+    });
 }

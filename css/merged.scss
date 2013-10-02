@@ -1,0 +1,46 @@
+@import url(http://fonts.googleapis.com/css?family=Knewave|Anton|Playball|Cinzel+Decorative:400,700);
+
+@mixin fontFamily($name) {
+  @if $name == 'Anton' {
+    font-family: $name, sans-serif;
+  } @else {
+    font-family: $name, cursive;
+  }
+}
+
+@mixin fontSize($size) {
+  font-size: $size;
+  line-height: $size + 2;
+}
+
+p, span, a {
+  &[data-font="Anton"] {
+    @include fontFamily("Anton");
+  }
+  &[data-font="knewave"] {
+    @include fontFamily("Knewave");
+  }
+  &[data-font="playball"] {
+    @include fontFamily("Playball");
+  }
+  &[data-font="cinzel"] {
+    @include fontFamily("Cinzel Decorative");
+  }
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: black;
+  color: white;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@import "_lyricvideo";
+@import "_webpage";
