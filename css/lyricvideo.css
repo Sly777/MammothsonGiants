@@ -1,0 +1,60 @@
+@import url(http://fonts.googleapis.com/css?family=Knewave|Anton|Playball|Cinzel+Decorative:400,700);
+body {
+  background-color: black;
+  color: white;
+  font-family: "Anton", sans-serif; }
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+  position: relative; }
+  .container .bolumler {
+    position: relative;
+    margin-top: 50px; }
+    .container .bolumler > p {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 0;
+      text-align: center;
+      opacity: 0; }
+      .container .bolumler > p[data-font="Anton"] {
+        font-family: "Anton", sans-serif; }
+      .container .bolumler > p[data-font="knewave"] {
+        font-family: "Knewave", cursive; }
+      .container .bolumler > p[data-font="playball"] {
+        font-family: "Playball", cursive; }
+      .container .bolumler > p[data-font="cinzel"] {
+        font-family: "Cinzel Decorative", cursive; }
+    .container .bolumler.bolum1 p:nth-child(1) {
+      font-size: 108px;
+      line-height: 110px;
+      -webkit-animation-duration: 0.5s; }
+    .container .bolumler.bolum1 p:nth-child(2) {
+      font-size: 52px;
+      line-height: 54px;
+      top: 25px;
+      left: 450px; }
+    .container .bolumler.bolum1 p:nth-child(3) {
+      font-size: 108px;
+      line-height: 110px;
+      top: 150px;
+      -webkit-animation-duration: 0.5s; }
+    .container .bolumler.bolum1 p:nth-child(4) {
+      font-size: 64px;
+      line-height: 66px;
+      top: 179px;
+      left: 390px; }
+    .container .bolumler.bolum2 p:nth-child(1) {
+      font-size: 28px;
+      line-height: 30px; }
+    .container .bolumler.bolum2 p:nth-child(2) {
+      font-size: 50px;
+      line-height: 52px;
+      top: 60px;
+      left: 220px; }
+    .container .bolumler.bolum2 p:nth-child(3) {
+      font-size: 80px;
+      line-height: 82px;
+      top: 150px;
+      left: -40px; }
