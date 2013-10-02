@@ -1,0 +1,96 @@
+@import url(http://fonts.googleapis.com/css?family=Knewave|Anton|Playball|Cinzel+Decorative:400,700);
+
+@mixin fontFamily($name) {
+  @if $name == 'Anton' {
+    font-family: $name, sans-serif;
+  } @else {
+    font-family: $name, cursive;
+  }
+}
+
+@mixin fontSize($size) {
+  font-size: $size;
+  line-height: $size + 2;
+}
+
+body {
+  background-color: black;
+  color: white;
+  @include fontFamily("Anton");
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+  position: relative;
+
+  .bolumler {
+    position: relative;
+    margin-top: 50px;
+
+    > p {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 0;
+      text-align: center;
+      opacity: 0;
+
+      &[data-font="Anton"] {
+        @include fontFamily("Anton");
+      }
+      &[data-font="knewave"] {
+        @include fontFamily("Knewave");
+      }
+      &[data-font="playball"] {
+        @include fontFamily("Playball");
+      }
+      &[data-font="cinzel"] {
+        @include fontFamily("Cinzel Decorative");
+      }
+    }
+
+    &.bolum1 {
+      p:nth-child(1) {
+        @include fontSize(108px);
+        -webkit-animation-duration: 0.5s;
+      }
+
+      p:nth-child(2) {
+        @include fontSize(52px);
+        top: 25px;
+        left: 450px;
+      }
+
+      p:nth-child(3) {
+        @include fontSize(108px);
+        top: 150px;
+        -webkit-animation-duration: 0.5s;
+      }
+
+      p:nth-child(4) {
+        @include fontSize(64px);
+        top: 179px;
+        left: 390px;
+      }
+    }
+
+    &.bolum2 {
+      p:nth-child(1) {
+        @include fontSize(28px);
+      }
+
+      p:nth-child(2) {
+        @include fontSize(50px);
+        top: 60px;
+        left: 220px;
+      }
+
+      p:nth-child(3) {
+        @include fontSize(80px);
+        top: 150px;
+        left: -40px;
+      }
+    }
+  }
+}
