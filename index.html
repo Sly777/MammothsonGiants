@@ -10,7 +10,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/merged.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
@@ -18,18 +18,36 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
+        <div class="mogoverlay loadingScreen">
+            <div class="mogcontain">
+                <img src="img/widecover/moglogo.png">
+                <img src="img/widecover/mogep.png">
+                <span data-font="playball">Yükleniyor...</span>
+            </div>
+        </div>
+
         <div id="container" class="container">
             <ul id="scene" class="scene">
                 <li class="layer" data-depth="0.00"><img src="img/widecover/01mammoth_widescreen_gokyuzu.jpg"></li>
-                <li class="layer" data-depth="0.25"><img src="img/widecover/02mammoth_widescreen_col.jpg"></li>
-                <li class="layer" data-depth="0.50"><img src="img/widecover/03mammoth_widescreen_dag.jpg"></li>
-                <li class="layer" data-depth="0.75"><img src="img/widecover/04mammoth_widescreen_agac.jpg"></li>
-                <li class="layer" data-depth="1.00"><img src="img/widecover/05mammoth_widescreen_yaratıklar.jpg"></li>
+                <li class="layer" data-depth="0.25"><img src="img/widecover/01mog-col.png"></li>
+                <li class="layer" data-depth="0.30"><img src="img/widecover/02mog-daglar.png"></li>
+                <li class="layer" data-depth="0.75"><img src="img/widecover/03mog-agac.png"></li>
+                <li class="layer" data-depth="0.87"><img src="img/widecover/04mog-yrtk.png"></li>
             </ul>
+        </div>
+
+        <div class="mogoverlay"></div>
+        <div class="mogcontain">
+            <img src="img/widecover/moglogo.png">
+            <img src="img/widecover/mogep.png">
+
+            <a href="#" target="_blank" data-i18n="downloadAlbum" data-font="knewave">Download</a>
+            <a href="#" target="_blan" data-i18n="streamAlbum" data-font="knewave">Listen</a>
         </div>
 
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/vendor/jquery.parallax.js"></script>
+        <script src="js/vendor/i18next-1.7.1.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
