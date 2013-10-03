@@ -1,5 +1,5 @@
 (function($, window, document) {
-    $(document).ready(function() {
+    $(window).load(function() {
         $('.loadingScreen').fadeOut("slow");
         website();
     });
@@ -60,5 +60,11 @@ function website() {
 
     i18n.init({ resStore: resources }, function(t) {
         $(".mogcontain").i18n();
+    });
+
+    $('.moglink:eq(1)').on("click", function() {
+        $.colorbox({html:'<iframe style="border: 0; width: 350px; height: 560px;" src="https://bandcamp.com/EmbeddedPlayer/album=1783703321/size=large/bgcol=333333/linkcol=e99708/transparent=true/" seamless><a href="http://mammothsongiants.bandcamp.com/album/desolated-2">Desolated by Mammoths on Giants</a></iframe>'});
+
+        return false;
     });
 }

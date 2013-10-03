@@ -1,7 +1,7 @@
-@import url(http://fonts.googleapis.com/css?family=Knewave|Anton|Playball|Cinzel+Decorative:400,700);
+@import url(http://fonts.googleapis.com/css?family=Knewave|Anton|Playball|Cinzel+Decorative:400,700|Titillium+Web:400,600);
 
 @mixin fontFamily($name) {
-  @if $name == 'Anton' {
+  @if $name == 'Anton' or $name == 'titillium' {
     font-family: $name, sans-serif;
   } @else {
     font-family: $name, cursive;
@@ -26,7 +26,14 @@ p, span, a {
   &[data-font="cinzel"] {
     @include fontFamily("Cinzel Decorative");
   }
+  &[data-font="titillium"] {
+    @include fontFamily("Titillium Web");
+  }
 }
+
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:99999; overflow:hidden;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxOverlay{background:rgba(0,0,0,0.5) repeat 0 0;}
 
 html, body {
   width: 100%;
